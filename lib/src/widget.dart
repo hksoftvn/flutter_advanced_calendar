@@ -199,9 +199,10 @@ class _AdvancedCalendarState extends State<AdvancedCalendar>
                     );
                   },
                 ),
+                const SizedBox(height: 8),
                 WeekDays(
                   style: theme.textTheme.bodyLarge?.copyWith(
-                    color: theme.hintColor,
+                    color: const Color(0xff262626),
                   ),
                   keepLineSize: widget.keepLineSize,
                   weekNames: _weekNames != null

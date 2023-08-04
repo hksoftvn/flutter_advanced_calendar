@@ -123,7 +123,7 @@ class WeekView extends StatelessWidget {
                     width: 6,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: theme.primaryColor,
+                      color: const Color(0xffD61B22),
                     ),
                   )
               ],

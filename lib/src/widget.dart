@@ -155,7 +155,12 @@ class _AdvancedCalendarState extends State<AdvancedCalendar>
         (index) => time.add(Duration(days: index * 1)),
       ).toList();
       _weekNames = List<String>.generate(7, (index) {
-        return DateFormat("EEEE").format(list[index]).split('').first;
+        var firstCharater = DateFormat("EEEE").format(list[index]);
+        if (firstCharater == "C") {
+          return "CN";
+        } else {
+          return "$firstCharater${index + 2}";
+        }
       });
     }
   }

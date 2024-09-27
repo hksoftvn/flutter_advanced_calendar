@@ -63,9 +63,11 @@ class DateBox extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: isSelected
-                ? theme.primaryColor
+                ? const Color(0xffD61B22)
                 : isToday
-                    ? theme.highlightColor
+                    ?
+                    // ? theme.highlightColor
+                    Colors.grey
                     : null,
             borderRadius: borderRadius,
           ),

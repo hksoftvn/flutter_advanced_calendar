@@ -29,12 +29,18 @@ class Header extends StatelessWidget {
     return Container(
       margin: margin,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          // Text(
+          //   _dateFormatter.format(monthDate),
+          //   style: dateStyle ?? theme.textTheme.titleMedium,
+          // ),
           Text(
-            _dateFormatter.format(monthDate),
+            "Tháng ${monthDate.month}, ${monthDate.year}",
             style: dateStyle ?? theme.textTheme.titleMedium,
           ),
+          const Icon(Icons.arrow_drop_down, color: Colors.black),
+          const Spacer(),
           InkWell(
             onTap: onPressed,
             borderRadius: const BorderRadius.all(
@@ -46,7 +52,7 @@ class Header extends StatelessWidget {
                 vertical: 4.0,
               ),
               child: Text(
-                'Today',
+                'Hôm nay',
                 style: todayStyle ?? theme.textTheme.titleMedium,
               ),
             ),
